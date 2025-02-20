@@ -2,29 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:food/components/my_button.dart';
 import 'package:food/components/my_text_field.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key, this.onTap});
-
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key, this.onTap});
   final void Function()? onTap;
-
   @override
-  // ignore: library_private_types_in_public_api
-  _LoginPageState createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  bool _isPasswordVisible = false; // Manage password visibility state
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
-  void login() {
-    /*
-  flii auht
-  */
-
-    // Navigate to home page
-  }
-
+  bool _isPasswordVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           SizedBox(height: 25),
           Text(
-            'Food Delivery App',
+            "let's create an account",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 18,
@@ -72,9 +63,28 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           const SizedBox(
+            height: 10,
+          ),
+          MyTextField(
+            controller: confirmPasswordController,
+            hintText: 'Confrim Password',
+            obscureText: !_isPasswordVisible, // Toggle password visibility
+            iconData: IconButton(
+              icon: Icon(
+                _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              onPressed: () {
+                setState(() {
+                  _isPasswordVisible = !_isPasswordVisible;
+                });
+              },
+            ),
+          ),
+          const SizedBox(
             height: 15,
           ),
-          MyButton(ontab: () {}, text: 'Sign In'),
+          MyButton(ontab: () {}, text: 'Sign up'),
           const SizedBox(
             height: 10,
           ),
@@ -82,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Not a member?',
+                'aleardy have an account?',
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.inversePrimary),
               ),
@@ -92,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
               GestureDetector(
                 onTap: widget.onTap,
                 child: Text(
-                  'sign up',
+                  'Login Now',
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontWeight: FontWeight.bold),

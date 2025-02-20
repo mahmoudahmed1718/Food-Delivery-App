@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food/components/my_button.dart';
 import 'package:food/components/my_text_field.dart';
+import 'package:food/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key, this.onTap});
@@ -23,6 +24,9 @@ class _LoginPageState extends State<LoginPage> {
   */
 
     // Navigate to home page
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return HomePage();
+    }));
   }
 
   @override
@@ -74,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(
             height: 15,
           ),
-          MyButton(ontab: () {}, text: 'Sign In'),
+          MyButton(ontab: login, text: 'Sign In'),
           const SizedBox(
             height: 10,
           ),

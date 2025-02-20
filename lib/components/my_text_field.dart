@@ -5,16 +5,19 @@ class MyTextField extends StatelessWidget {
       {super.key,
       required this.controller,
       required this.hintText,
-      required this.obscureText});
+      required this.obscureText,
+      this.iconData});
   final TextEditingController controller;
   final String hintText;
   final bool obscureText;
+  final Widget? iconData;
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
       obscureText: obscureText,
       decoration: InputDecoration(
+        suffixIcon: iconData,
         hintText: hintText,
         hintStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
         enabledBorder: OutlineInputBorder(

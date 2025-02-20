@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:food/components/my_button.dart';
 import 'package:food/components/my_text_field.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key, this.onTap});
+
+  final void Function()? onTap;
 
   @override
+  // ignore: library_private_types_in_public_api
   _LoginPageState createState() => _LoginPageState();
 }
 
@@ -20,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       body: ListView(
         padding: EdgeInsets.all(20),
         children: [
+          SizedBox(height: 60),
           Icon(
             Icons.lock_open_rounded,
             size: 100,
@@ -58,6 +63,35 @@ class _LoginPageState extends State<LoginPage> {
               },
             ),
           ),
+          const SizedBox(
+            height: 15,
+          ),
+          MyButton(ontab: () {}, text: 'Sign In'),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Not a member?',
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary),
+              ),
+              const SizedBox(
+                width: 4,
+              ),
+              GestureDetector(
+                onTap: widget.onTap,
+                child: Text(
+                  'sign up',
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

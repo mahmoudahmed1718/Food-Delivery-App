@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: LoginPage(),
+      home: LoginPage(
+        onTap: () {},
+      ),
     );
   }
 }

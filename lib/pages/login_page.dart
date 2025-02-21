@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food/components/my_button.dart';
 import 'package:food/components/my_text_field.dart';
 import 'package:food/pages/home_page.dart';
+import 'package:food/pages/setting_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key, this.onTap});
@@ -32,11 +33,22 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SettingPage();
+                }));
+              },
+              icon: Icon(Icons.settings))
+        ],
+      ),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: ListView(
         padding: EdgeInsets.all(20),
         children: [
-          SizedBox(height: 100),
+          SizedBox(height: 10),
           Icon(
             Icons.lock_open_rounded,
             size: 100,

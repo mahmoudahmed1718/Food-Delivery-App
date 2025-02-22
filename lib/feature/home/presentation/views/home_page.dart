@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:food/core/widgets/my_sliver_appbar.dart';
+import 'package:food/feature/home/presentation/views/widgets/my_current_location.dart';
 import 'package:food/widgets/my_drawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,7 +29,8 @@ class _HomePageState extends State<HomePage> {
                           color: Theme.of(context).colorScheme.secondary,
                         )
                         // My current Location
-
+                        ,
+                        MyCurrentLocation(),
                         //description box
                       ],
                     ))

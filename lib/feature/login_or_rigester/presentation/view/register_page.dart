@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/components/my_button.dart';
-import 'package:food/components/my_text_field.dart';
+import 'package:food/core/widgets/my_button.dart';
+import 'package:food/core/widgets/my_text_field.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key, this.onTap});

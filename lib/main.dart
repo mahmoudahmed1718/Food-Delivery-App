@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/auth/login_or_register.dart';
-import 'package:food/themes/theme_provider.dart';
+import 'package:food/core/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {

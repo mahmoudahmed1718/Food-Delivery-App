@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food/components/my_button.dart';
-import 'package:food/components/my_text_field.dart';
-import 'package:food/pages/home_page.dart';
-import 'package:food/pages/setting_page.dart';
+import 'package:food/core/widgets/my_button.dart';
+import 'package:food/core/widgets/my_text_field.dart';
+import 'package:food/feature/home/presentation/views/home_page.dart';
+import 'package:food/feature/setting/presentation/view/setting_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key, this.onTap});

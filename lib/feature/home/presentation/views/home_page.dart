@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/components/my_drawer.dart';
-import 'package:food/components/my_sliver_appbar.dart';
+import 'package:food/core/widgets/my_sliver_appbar.dart';
+import 'package:food/widgets/my_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

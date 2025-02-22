@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/components/my_drawer_tile.dart';
-import 'package:food/pages/setting_page.dart';
+import 'package:food/feature/home/presentation/views/widgets/my_drawer_tile.dart';
+import 'package:food/feature/setting/presentation/view/setting_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

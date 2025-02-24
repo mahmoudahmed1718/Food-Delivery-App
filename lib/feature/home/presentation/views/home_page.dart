@@ -5,6 +5,7 @@ import 'package:food/feature/home/data/food_model.dart';
 import 'package:food/feature/home/data/resturant_model.dart';
 import 'package:food/feature/home/presentation/views/widgets/my_current_location.dart';
 import 'package:food/feature/home/presentation/views/widgets/my_description_box.dart';
+import 'package:food/feature/home/presentation/views/widgets/my_food_tile.dart';
 import 'package:food/feature/home/presentation/views/widgets/my_tab_appbar.dart';
 import 'package:food/widgets/my_drawer.dart';
 import 'package:provider/provider.dart';
@@ -35,9 +36,8 @@ class _HomePageState extends State<HomePage>
           physics: NeverScrollableScrollPhysics(),
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(catogoryMenu[index].name),
-            );
+            final food = catogoryMenu[index];
+            return MyFoodTile(food: food, ontab: () {});
           });
     }).toList();
   }

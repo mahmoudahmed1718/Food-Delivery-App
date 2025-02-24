@@ -228,12 +228,14 @@ class RestaurantModel extends ChangeNotifier {
 
     // Drinks
     FoodModel(
-      name: 'Coca-Cola',
-      description: 'Chilled classic Coca-Cola.',
+      name: 'Lemonade',
+      description: 'Refreshing homemade lemonade.',
       imagePath: Assets.imagesDrinksDrink1,
-      price: 0.99,
+      price: 1.29,
       category: FoodCategory.drinks,
-      availableAddons: [],
+      availableAddons: [
+        Addon(name: 'Mint', price: 0.49),
+      ],
     ),
     FoodModel(
       name: 'Orange Juice',
@@ -244,8 +246,8 @@ class RestaurantModel extends ChangeNotifier {
       availableAddons: [],
     ),
     FoodModel(
-      name: 'Lemonade',
-      description: 'Refreshing homemade lemonade.',
+      name: 'ice lattie',
+      description: 'Refreshing Lattie.',
       imagePath: Assets.imagesDrinksDrink3,
       price: 1.29,
       category: FoodCategory.drinks,

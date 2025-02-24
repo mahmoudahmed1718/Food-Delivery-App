@@ -32,7 +32,7 @@ class SettingPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 CupertinoSwitch(
-                  value: Provider.of<ThemeProvider>(context, listen: false)
+                  value: Provider.of<ThemeProvider>(context, listen: true)
                       .isDarkMode,
                   onChanged: (value) =>
                       Provider.of<ThemeProvider>(context, listen: false)

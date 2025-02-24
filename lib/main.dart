@@ -5,14 +5,22 @@ import 'package:food/feature/home/data/resturant_model.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (context) => ThemeProvider()),
-      ChangeNotifierProvider(create: (context) => RestaurantModel()),
-    ],
-    child: const MyApp(),
-  ));
+void main() async {
+  WidgetsFlutterBinding
+      .ensureInitialized(); // تأكد من تهيئة Flutter قبل `async`
+
+  ThemeProvider themeProvider = ThemeProvider();
+  await themeProvider.loadTheme(); // تحميل الثيم قبل تشغيل التطبيق
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => themeProvider),
+        ChangeNotifierProvider(create: (context) => RestaurantModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +40,8 @@ class MyApp extends StatelessWidget {
           const ResponsiveBreakpoint.resize(1800, name: DESKTOP),
         ],
       ),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      theme:
+          Provider.of<ThemeProvider>(context).themeData, // تطبيق الثيم المحفوظ
       home: const LoginOrRegister(),
     );
   }

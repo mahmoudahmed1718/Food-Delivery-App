@@ -28,6 +28,7 @@ class RestaurantModel extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Extra BBQ sauce', price: 0.49),
         Addon(name: 'Onion rings', price: 0.99),
+        Addon(name: 'Cheddar cheese', price: 1.29),
       ],
     ),
     FoodModel(
@@ -40,6 +41,7 @@ class RestaurantModel extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Extra jalapeños', price: 0.79),
         Addon(name: 'Guacamole', price: 1.49),
+        Addon(name: 'Spicy mayo', price: 0.99),
       ],
     ),
     FoodModel(
@@ -51,6 +53,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.burgers,
       availableAddons: [
         Addon(name: 'Extra mushrooms', price: 0.99),
+        Addon(name: 'Swiss cheese', price: 1.49),
+        Addon(name: 'Garlic aioli', price: 0.79),
       ],
     ),
     FoodModel(
@@ -63,6 +67,7 @@ class RestaurantModel extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Extra patty', price: 2.49),
         Addon(name: 'Egg', price: 1.29),
+        Addon(name: 'Lettuce', price: 0.59),
       ],
     ),
     // Salads
@@ -76,6 +81,7 @@ class RestaurantModel extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Grilled chicken', price: 2.99),
         Addon(name: 'Extra parmesan', price: 0.79),
+        Addon(name: 'Croutons', price: 0.49),
       ],
     ),
     FoodModel(
@@ -87,6 +93,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Extra feta', price: 1.29),
+        Addon(name: 'Kalamata olives', price: 0.99),
+        Addon(name: 'Cucumber slices', price: 0.69),
       ],
     ),
     FoodModel(
@@ -98,6 +106,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 1.99),
+        Addon(name: 'Cherry tomatoes', price: 0.79),
+        Addon(name: 'Sunflower seeds', price: 0.59),
       ],
     ),
     FoodModel(
@@ -109,6 +119,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Extra bacon', price: 1.49),
+        Addon(name: 'Hard-boiled egg', price: 0.99),
+        Addon(name: 'Blue cheese crumbles', price: 1.29),
       ],
     ),
     FoodModel(
@@ -119,6 +131,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Honey drizzle', price: 0.79),
+        Addon(name: 'Almond slices', price: 0.99),
+        Addon(name: 'Greek yogurt', price: 1.49),
       ],
     ),
 
@@ -131,6 +145,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Cheese sauce', price: 0.99),
+        Addon(name: 'Chili flakes', price: 0.49),
+        Addon(name: 'Truffle oil', price: 1.29),
       ],
     ),
     FoodModel(
@@ -141,6 +157,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Extra sauce', price: 0.49),
+        Addon(name: 'Parmesan dusting', price: 0.89),
+        Addon(name: 'BBQ glaze', price: 0.99),
       ],
     ),
     FoodModel(
@@ -151,6 +169,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Extra marinara sauce', price: 0.79),
+        Addon(name: 'Garlic butter', price: 0.69),
+        Addon(name: 'Basil flakes', price: 0.49),
       ],
     ),
     FoodModel(
@@ -170,7 +190,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 1.99,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(name: 'Extra garlic butter', price: 0.59),
+        Addon(name: 'Honey drizzle', price: 0.79),
+        Addon(name: 'Cinnamon sugar', price: 0.59),
+        Addon(name: 'Chipotle mayo', price: 0.99),
       ],
     ),
 
@@ -183,6 +205,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Extra chocolate drizzle', price: 0.79),
+        Addon(name: 'Whipped cream', price: 0.59),
+        Addon(name: 'Caramel sauce', price: 0.99),
       ],
     ),
     FoodModel(
@@ -202,7 +226,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 2.79,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(name: 'Vanilla ice cream scoop', price: 1.29),
+        Addon(name: 'Extra nuts', price: 0.59),
+        Addon(name: 'Sprinkles', price: 0.49),
+        Addon(name: 'Choco chips', price: 0.79),
       ],
     ),
     FoodModel(
@@ -212,7 +238,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 2.19,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(name: 'Extra fudge sauce', price: 0.89),
+        Addon(name: 'Vanilla ice cream scoop', price: 1.29),
+        Addon(name: 'Caramel drizzle', price: 0.89),
+        Addon(name: 'Cinnamon powder', price: 0.69),
       ],
     ),
     FoodModel(
@@ -222,7 +250,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 3.49,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(name: 'Extra strawberries', price: 0.99),
+        Addon(name: 'Extra fudge sauce', price: 0.89),
+        Addon(name: 'Crushed walnuts', price: 0.99),
+        Addon(name: 'Espresso shot', price: 1.49),
       ],
     ),
 
@@ -234,7 +264,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 1.29,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Mint', price: 0.49),
+        Addon(name: 'Extra strawberries', price: 0.99),
+        Addon(name: 'White chocolate drizzle', price: 0.79),
+        Addon(name: 'Oreo crumbles', price: 0.89),
       ],
     ),
     FoodModel(
@@ -243,7 +275,11 @@ class RestaurantModel extends ChangeNotifier {
       imagePath: Assets.imagesDrinksDrink2,
       price: 1.49,
       category: FoodCategory.drinks,
-      availableAddons: [],
+      availableAddons: [
+        Addon(name: 'Pulp', price: 0.49),
+        Addon(name: 'Ice cubes', price: 0.29),
+        Addon(name: 'Vitamin C boost', price: 0.99),
+      ],
     ),
     FoodModel(
       name: 'ice lattie',
@@ -263,6 +299,8 @@ class RestaurantModel extends ChangeNotifier {
       category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: 'Caramel syrup', price: 0.79),
+        Addon(name: 'Extra espresso shot', price: 1.29),
+        Addon(name: 'Cinnamon sprinkle', price: 0.49),
       ],
     ),
     FoodModel(
@@ -272,7 +310,9 @@ class RestaurantModel extends ChangeNotifier {
       price: 2.49,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Chocolate syrup', price: 0.79),
+        Addon(name: 'Vanilla syrup', price: 0.79),
+        Addon(name: 'Cold foam', price: 1.19),
+        Addon(name: 'Coconut milk', price: 0.99),
       ],
     ),
   ];

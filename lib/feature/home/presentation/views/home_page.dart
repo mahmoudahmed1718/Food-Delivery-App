@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:food/core/widgets/my_sliver_appbar.dart';
+import 'package:food/feature/food/presentation/views/food_page.dart';
 import 'package:food/feature/home/data/food_model.dart';
 import 'package:food/feature/home/data/resturant_model.dart';
 import 'package:food/feature/home/presentation/views/widgets/my_current_location.dart';
@@ -37,7 +38,12 @@ class _HomePageState extends State<HomePage>
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
             final food = catogoryMenu[index];
-            return MyFoodTile(food: food, ontab: () {});
+            return MyFoodTile(
+                food: food,
+                ontab: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return FoodPage(food: food);
+                    })));
           });
     }).toList();
   }

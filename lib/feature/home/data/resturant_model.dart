@@ -359,6 +359,19 @@ O P P E R A T I O N S
   }
 // get total price of cart
 
+  double getTotalPrice() {
+    double totalPrice = 0;
+    for (CartModel cartItem in _cart) {
+      double itemTotal = cartItem.foodModel.price;
+
+      for (Addon addon in cartItem.selectedAddon) {
+        itemTotal += addon.price;
+      }
+      totalPrice += itemTotal * cartItem.quantaty;
+    }
+    return totalPrice;
+  }
+
 // get total number of item of cart
 
 // clear cart

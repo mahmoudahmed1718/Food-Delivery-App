@@ -1,5 +1,7 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:food/core/utils/assets.dart';
+import 'package:food/feature/cart/data/model/cart_model.dart';
 import 'package:food/feature/home/data/food_model.dart';
 
 class RestaurantModel extends ChangeNotifier {
@@ -327,9 +329,22 @@ class RestaurantModel extends ChangeNotifier {
 O P P E R A T I O N S
 
 */
-
+// user cart
+  final List<CartModel> _cart = [];
 // add to cart
-
+  void addTocart(FoodModel food, List<Addon> selectedAddon) {
+    CartModel? cartModel = _cart.firstWhereOrNull((item) {
+      bool isSameFood = item.foodModel == food;
+      bool isSameAddon =
+          ListEquality().equals(item.selectedAddon, selectedAddon);
+      return isSameAddon && isSameFood;
+    });
+    // if item arldeay exsist
+    if (cartModel != null) {
+      _cart.add(CartModel(foodModel: food, selectedAddon: selectedAddon));
+    }
+    notifyListeners();
+  }
 // romove from cart
 
 // get total price of cart

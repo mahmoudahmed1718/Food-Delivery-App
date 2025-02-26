@@ -345,8 +345,18 @@ O P P E R A T I O N S
     }
     notifyListeners();
   }
-// romove from cart
 
+// romove from cart
+  void removeFromCart(CartModel cartItem) {
+    int cartIndex = _cart.indexOf(cartItem);
+    if (cartIndex != -1) {
+      if (_cart[cartIndex].quantaty > 1) {
+        _cart[cartIndex].quantaty--;
+      } else {
+        _cart.removeAt(cartIndex);
+      }
+    }
+  }
 // get total price of cart
 
 // get total number of item of cart
